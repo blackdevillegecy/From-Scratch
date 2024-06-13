@@ -1,9 +1,9 @@
 import torch
 from torch import nn
-import numpy as np
+from typing import Union
 
 class LayerNorm(nn.Module):
-    def __init__(self, normalized_shape, epsilon=1e-5) -> None:
+    def __init__(self, normalized_shape: Union[list, int, torch.Size], epsilon: float = 1e-5) -> None:
         super(LayerNorm, self).__init__()
         self.normalized_shape = normalized_shape
         self.gamma = nn.Parameter(torch.ones(normalized_shape))
@@ -52,8 +52,8 @@ class LayerNorm(nn.Module):
         return y
 
 ## EXPERMIMENT ##
-normalized_shape =[2, 4]
-obj = LayerNorm(normalized_shape)
-x = torch.randn(5, 2, 4)
-m = obj.forward(x)
-print(m)
+# normalized_shape =[2, 4]
+# obj = LayerNorm(normalized_shape)
+# x = torch.randn(5, 2, 4)
+# m = obj.forward(x)
+# print(m)
