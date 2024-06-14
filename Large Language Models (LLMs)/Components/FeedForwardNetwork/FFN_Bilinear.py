@@ -21,9 +21,10 @@ class FeedForwardBilinear(nn.Module):
 
 
 ## EXPERIMENTS ##
-dim=4
-multiplier=256
-obj = FeedForwardBilinear(dim, multiplier)
-x = torch.randn(2, dim)
-bi = obj.forward(x)
-print(bi)
+if __name__ == '__main__':
+    dim=4
+    multiplier=256
+    obj = FeedForwardBilinear(dim, multiplier)
+    x = torch.randn(2, dim)
+    bi = obj.forward(x)
+    print(bi)

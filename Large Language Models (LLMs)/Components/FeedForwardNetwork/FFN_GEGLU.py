@@ -25,9 +25,10 @@ class FeedForwardGEGLU(nn.Module):
 
 
 ## EXPERIMENTS ##
-dim=4
-multiplier=256
-obj = FeedForwardGEGLU(dim, multiplier)
-x = torch.randn(2, dim)
-ge = obj.forward(x)
-print(ge)
+if __name__ == '__main__':
+    dim=4
+    multiplier=256
+    obj = FeedForwardGEGLU(dim, multiplier)
+    x = torch.randn(2, dim)
+    ge = obj.forward(x)
+    print(ge)

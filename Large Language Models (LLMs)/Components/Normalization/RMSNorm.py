@@ -16,9 +16,10 @@ class RMSNorm(nn.Module):
     
 
 ## EXPERIMENT ##
-dim=3
-obj = RMSNorm(dim)
-x = torch.randn(2, dim)
-print("x:", x)
-rms = obj._normalize(x)
-print("rms:", rms)
+if __name__ == '__main__':
+    dim=3
+    obj = RMSNorm(dim)
+    x = torch.randn(2, dim)
+    print("x:", x)
+    rms = obj._normalize(x)
+    print("rms:", rms)

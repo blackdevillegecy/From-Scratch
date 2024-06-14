@@ -21,9 +21,10 @@ class FeedForwardReGLU(nn.Module):
         return x
 
 ## EXPERIMENTS ##
-dim=4
-multiplier=256
-obj = FeedForwardReGLU(dim, multiplier)
-x = torch.randn(2, dim)
-re = obj.forward(x)
-print(re)
+if __name__ == '__main__':
+    dim=4
+    multiplier=256
+    obj = FeedForwardReGLU(dim, multiplier)
+    x = torch.randn(2, dim)
+    re = obj.forward(x)
+    print(re)

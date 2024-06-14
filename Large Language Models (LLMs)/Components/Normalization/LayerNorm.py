@@ -52,8 +52,9 @@ class LayerNorm(nn.Module):
         return y
 
 ## EXPERMIMENT ##
-# normalized_shape =[2, 4]
-# obj = LayerNorm(normalized_shape)
-# x = torch.randn(5, 2, 4)
-# m = obj.forward(x)
-# print(m)
+if __name__ == '__main__':
+    normalized_shape =[2, 4]
+    obj = LayerNorm(normalized_shape)
+    x = torch.randn(5, 2, 4)
+    m = obj.forward(x)
+    print(m)

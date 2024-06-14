@@ -25,9 +25,10 @@ class FeedForwardSwiGLU(nn.Module):
 
 
 ## EXPERIMENTS ##
-dim=4
-multiplier=256
-obj = FeedForwardSwiGLU(dim, multiplier)
-x = torch.randn(2, dim)
-sw = obj.forward(x)
-print(sw)
+if __name__ == '__main__':
+    dim=4
+    multiplier=256
+    obj = FeedForwardSwiGLU(dim, multiplier)
+    x = torch.randn(2, dim)
+    sw = obj.forward(x)
+    print(sw)

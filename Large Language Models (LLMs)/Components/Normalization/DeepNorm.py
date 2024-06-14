@@ -16,9 +16,10 @@ class DeepNorm(nn.Module):
     
 
 ## EXPERIMENT ##
-alpha, normalized_shape = 1.2, [3, 4]
-x = torch.randn((5, 3, 4))
-gx = torch.randn((5, 3, 4))
-obj = DeepNorm(alpha, normalized_shape)
-dn = obj.forward(x, gx)
-print(dn)
+if __name__ == '__main__':    
+    alpha, normalized_shape = 1.2, [3, 4]
+    x = torch.randn((5, 3, 4))
+    gx = torch.randn((5, 3, 4))
+    obj = DeepNorm(alpha, normalized_shape)
+    dn = obj.forward(x, gx)
+    print(dn)

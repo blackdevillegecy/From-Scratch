@@ -25,9 +25,10 @@ class FeedForwardGLU(nn.Module):
 
 
 ## EXPERIMENTS ##
-dim=4
-multiplier=256
-obj = FeedForwardGLU(dim, multiplier)
-x = torch.randn(2, dim)
-glu = obj.forward(x)
-print(glu)
+if __name__ == '__main__':
+    dim=4
+    multiplier=256
+    obj = FeedForwardGLU(dim, multiplier)
+    x = torch.randn(2, dim)
+    glu = obj.forward(x)
+    print(glu)
